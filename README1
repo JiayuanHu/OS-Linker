@@ -1,0 +1,29 @@
+Manual under test for lab1samples
+
+Written in C++. Executable file named linker.
+
+#file specification
+#current path: /home/jh5976/OS/Linker/
+#source code: main.cpp main.h errorevent.cpp errorevent.h
+#test script & input folder : lab1samples/*
+#output folder: output
+#executable: linker
+
+#switch compiler versions
+#using gcc-5.2.0
+module unload gcc-4.4.7
+module load gcc-5.2.0
+
+#compile(no need)
+make
+
+#create output folder(no need)
+mkdir output
+
+#test
+cd lab1samples
+./runit.sh ../output ../linker 
+./gradeit . ../output
+
+#unload
+module unload gcc-5.2.0
